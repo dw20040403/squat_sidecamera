@@ -69,7 +69,7 @@
 |---|---|
 | 端末 | iPhone 15 ×2、最新のiOS、Safari |
 | 設置 | 縦置き、三脚に固定。全身（足先まで）が画面に入る距離 |
-| カメラ配置 | 2台の視線の交差角が60〜90°。既定は被験者の正面の左右45°（正面を0°として−45°と+45°、交差角90°）。配置は5.4.4節で設定・確認する |
+| カメラ配置 | 2台の視線の交差角が60〜90°。既定は正面を0°として30°と90°（主端末が右前30°、副端末が右横90°、交差角60°）。配置は5.4.4節で設定・確認する |
 | ネットワーク | 同一Wi-Fi内。インターネット接続は不要（必要なファイルはすべて自前で配信する） |
 | サーバー | Mac上のNode.js（LTS）。HTTPS（mkcertによるローカル証明書） |
 | 開発・デバッグ | Mac上でClaude Codeを使用。実機のデバッグにはMacのSafariのWebインスペクタを使う |
@@ -192,9 +192,12 @@
       "sub":  { "azimuthDeg":  45, "distanceM": 2.5, "heightM": 1.0 } },
     { "id": "right-side", "label": "右側の前後（45°/135°）",
       "main": { "azimuthDeg": 45,  "distanceM": 2.5, "heightM": 1.0 },
-      "sub":  { "azimuthDeg": 135, "distanceM": 2.5, "heightM": 1.0 } }
+      "sub":  { "azimuthDeg": 135, "distanceM": 2.5, "heightM": 1.0 } },
+    { "id": "side-30-90", "label": "右前と右横（30°/90°）",
+      "main": { "azimuthDeg": 30, "distanceM": 2.5, "heightM": 1.0 },
+      "sub":  { "azimuthDeg": 90, "distanceM": 2.5, "heightM": 1.0 } }
   ],
-  "default": "front-pair",
+  "default": "side-30-90",
   "tolerance": { "azimuthDeg": 10, "distanceM": 0.3, "heightM": 0.15 },
   "crossingAngleRangeDeg": [60, 90]
 }
@@ -359,8 +362,8 @@
     "sub":  { "deviceName": "iphone15-B", "intrinsics": { ... }, "extrinsics": { "R": [], "t": [] }, "videoSize": [720,1280] }
   },
   "layout": {                          // 5.4.4節
-    "presetId": "front-pair",
-    "planned":  { "main": { "azimuthDeg": -45, "distanceM": 2.5, "heightM": 1.0 }, "sub": { ... } },
+    "presetId": "side-30-90",
+    "planned":  { "main": { "azimuthDeg": 30, "distanceM": 2.5, "heightM": 1.0 }, "sub": { ... } },
     "measured": { "main": { "azimuthDeg": -43.2, "distanceM": 2.46, "heightM": 1.02 }, "sub": { ... },
                   "crossingAngleDeg": 88.1 }
   },
