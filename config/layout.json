@@ -1,0 +1,19 @@
+{
+  "presets": [
+    {
+      "id": "front-pair",
+      "label": "正面の左右（−45°/+45°）",
+      "main": { "azimuthDeg": -45, "distanceM": 2.5, "heightM": 1.0 },
+      "sub": { "azimuthDeg": 45, "distanceM": 2.5, "heightM": 1.0 }
+    },
+    {
+      "id": "right-side",
+      "label": "右側の前後（45°/135°）",
+      "main": { "azimuthDeg": 45, "distanceM": 2.5, "heightM": 1.0 },
+      "sub": { "azimuthDeg": 135, "distanceM": 2.5, "heightM": 1.0 }
+    }
+  ],
+  "default": "front-pair",
+  "tolerance": { "azimuthDeg": 10, "distanceM": 0.3, "heightM": 0.15 },
+  "crossingAngleRangeDeg": [60, 90]
+}

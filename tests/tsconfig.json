@@ -1,0 +1,21 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "types": ["node"],
+    "noEmit": true
+  },
+  "include": [
+    "./**/*.ts",
+    "../web/src/fusion",
+    "../web/src/metrics",
+    "../web/src/monitor",
+    "../web/src/net/clockSync.ts",
+    "../web/src/record/session.ts",
+    "../web/src/record/zip.ts",
+    "../server/src/signaling.ts",
+    "../playwright.config.ts"
+  ]
+}

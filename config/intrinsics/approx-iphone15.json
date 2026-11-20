@@ -1,0 +1,21 @@
+{
+  "deviceName": "approx-iphone15",
+  "approximate": true,
+  "imageSize": [720, 1280],
+  "K": {
+    "fx": 1050,
+    "fy": 1050,
+    "cx": 360,
+    "cy": 640
+  },
+  "dist": {
+    "k1": 0,
+    "k2": 0,
+    "p1": 0,
+    "p2": 0,
+    "k3": 0
+  },
+  "rms": 0.0,
+  "date": "2026-11-18",
+  "note": "校正前の仮の値（iPhone 15の標準広角・縦置き720×1280の概算）。開発・動作確認用。計測にはtools/calibrate_intrinsics.pyで求めた値を使うこと。"
+}

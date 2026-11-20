@@ -1,0 +1,10 @@
+{
+  "note": "テスト動画の回帰テストの基準値の例。実際の動画で一度処理し、その結果を見て範囲を決めてから baseline.json として保存する",
+  "maxMeanReprojErrPx": 8,
+  "maxJointMissingRate": 0.15,
+  "metrics": {
+    "kneeFlexL": { "min": [0, 30], "max": [70, 140], "maxMissingRate": 0.2 },
+    "kneeFlexR": { "min": [0, 30], "max": [70, 140], "maxMissingRate": 0.2 },
+    "trunkLean": { "min": [-15, 20], "max": [15, 70], "maxMissingRate": 0.2 }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "frameIntervalMs": 90,
+  "poseModel": "full",
+  "video": { "width": 1280, "height": 720 },
+  "fusion": {
+    "fusionDelayMs": 120,
+    "maxPairGapMs": 150,
+    "maxExtrapMs": 50,
+    "minVisibility": 0.5,
+    "maxReprojPx": 30,
+    "maxHoldMs": 300,
+    "swapCorrection": true,
+    "swapMarginPx": 3,
+    "oneEuro": { "minCutoff": 1.0, "beta": 5.0, "dCutoff": 1.0 }
+  },
+  "metrics": { "kneeInMinFlexDeg": 30, "kneeInMinHorizM": 0.05 },
+  "monitor": {
+    "peerTimeoutS": 1.0,
+    "lowVisibilityS": 1.0,
+    "maxReprojErrPx": 20,
+    "highReprojS": 2.0,
+    "minFps": 5,
+    "lowFpsS": 3.0,
+    "maxRttMs": 100,
+    "highRttS": 3.0
+  },
+  "clockSync": {
+    "initialSamples": 20,
+    "initialBest": 5,
+    "periodicIntervalS": 10,
+    "periodicSamples": 5,
+    "emaAlpha": 0.3,
+    "rttProbeIntervalS": 1,
+    "requestTimeoutMs": 1000
+  },
+  "expected2dErrPx": 5,
+  "recording": { "recordVideo": true, "frameFlushCount": 50 },
+  "alarm": { "frequencyHz": 880, "volume": 0.3, "durationMs": 1500 }
+}
